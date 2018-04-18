@@ -3,7 +3,7 @@ SECTION = "kernel"
 LICENSE = "GPLv2"
 
 KERNEL_RELEASE = "4.10.12"
-COMPATIBLE_MACHINE = "(e4hd)"
+COMPATIBLE_MACHINE = "(e4hdultra)"
 
 inherit kernel machine_kernel_pr
 
