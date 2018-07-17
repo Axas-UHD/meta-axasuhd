@@ -2,6 +2,8 @@ DESCRIPTION = "Linux kernel for ${MACHINE}"
 SECTION = "kernel"
 LICENSE = "GPLv2"
 
+PACKAGE_ARCH = "${MACHINE_ARCH}"
+
 KERNEL_RELEASE = "4.10.12"
 COMPATIBLE_MACHINE = "(e4hd)"
 

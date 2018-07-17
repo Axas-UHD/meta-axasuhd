@@ -3,6 +3,8 @@ SECTION = "base"
 PRIORITY = "required"
 LICENSE = "CLOSED"
 
+PACKAGE_ARCH = "${MACHINE_ARCH}"
+
 PV = "${KV}-${SRCDATE}"
 
 SRC_URI = "http://222.239.254.238/e4hd/drivers/${MACHINE}-drivers-${PV}.zip"
