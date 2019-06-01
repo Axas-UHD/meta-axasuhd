@@ -7,7 +7,7 @@ COMPATIBLE_MACHINE = "(e4hd)"
 
 inherit kernel machine_kernel_pr
 
-MACHINE_KERNEL_PR_append = ".0"
+MACHINE_KERNEL_PR_append = ".1"
 
 SRC_URI[arm.md5sum] = "bda1c09ed92a805cedc6770c0dd40e81"
 SRC_URI[arm.sha256sum] = "67a3ac98727595a399d5c399d3b66a7fadbe8136ac517e08decba5ea6964674a"
@@ -31,6 +31,7 @@ SRC_URI_append_arm = " \
 	file://findkerneldevice.py \
 	file://reserve_dvb_adapter_0.patch \
 	file://blacklist_mmc0.patch \
+	file://initramfs-subdirboot.cpio.gz;unpack=0 \
 	"
 
 S = "${WORKDIR}/linux-${PV}"
@@ -45,6 +46,11 @@ KERNEL_IMAGETYPE_arm = "zImage"
 KERNEL_OUTPUT_arm = "arch/${ARCH}/boot/${KERNEL_IMAGETYPE}"
 
 FILES_kernel-image_arm = "/${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE} /${KERNEL_IMAGEDEST}/findkerneldevice.py"
+
+kernel_do_configure_prepend_arm() {
+	install -d ${B}/usr
+	install -m 0644 ${WORKDIR}/initramfs-subdirboot.cpio.gz ${B}/
+}
 
 kernel_do_install_append_arm() {
         install -d ${D}/${KERNEL_IMAGEDEST}
