@@ -10,7 +10,7 @@ DEPENDS = "axas-libgles-headers"
 PV = "${SRCDATE}"
 PR = "r0"
 
-SRC_URI = "http://222.239.254.238/e4hd/libgles/${MACHINE}-libgles-${SRCDATE}.zip"
+SRC_URI = "http://121.143.3.35/e4hd/libgles/${MACHINE}-libgles-${SRCDATE}.zip"
 
 S = "${WORKDIR}"
 
