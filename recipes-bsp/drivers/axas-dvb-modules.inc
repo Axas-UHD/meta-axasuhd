@@ -5,7 +5,7 @@ LICENSE = "CLOSED"
 
 PV = "${KV}-${SRCDATE}"
 
-SRC_URI = "http://222.239.254.238/e4hd/drivers/${MACHINE}-drivers-${PV}.zip"
+SRC_URI = "http://121.143.3.35/e4hd/drivers/${MACHINE}-drivers-${PV}.zip"
 
 S = "${WORKDIR}"
 
