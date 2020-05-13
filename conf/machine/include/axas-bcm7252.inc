@@ -8,7 +8,10 @@ PREFERRED_VERSION_linux-axas = "4.10.12"
 #Provider
 PREFERRED_PROVIDER_virtual/kernel ?= "linux-axas"
 PREFERRED_PROVIDER_virtual/egl ?= "axas-libgles-${MACHINE}"
+PREFERRED_PROVIDER_virtual/libgles1 ?= "axas-libgles-${MACHINE}"
 PREFERRED_PROVIDER_virtual/libgles2 ?= "axas-libgles-${MACHINE}"
+PREFERRED_PROVIDER_virtual/libgl ?= "mesa"
+PREFERRED_PROVIDER_virtual/mesa ?= "mesa"
 
 require conf/machine/include/tune-cortexa15.inc
 require conf/machine/include/axas-essential.inc
