@@ -29,7 +29,7 @@ MACHINE_EXTRA_RRECOMMENDS = " \
 
 DVBMEDIASINK_CONFIG += " --with-h265 --with-vb8 --with-vb9 --with-opus --with-wma --with-wmv --with-pcm --with-dts --with-eac3"
 
-MACHINE_FEATURES += " alsa usbhost wlan 3dtv switchoff osdposition hdmicec"
+MACHINE_FEATURES += " alsa usbhost wlan 3dtv switchoff osdposition hdmicec colorlcd220 lcd220 HDMI"
 
 IMAGEVERSION := "${DISTRO_NAME}-${DISTRO_VERSION}-${DATE}"
 IMAGEVERSION[vardepsexclude] = "DATE"
@@ -52,3 +52,20 @@ IMAGE_CMD_axasemmc_append = "\
 IMAGE_CMD_prepend = " \
 	rm -Rf ${IMAGE_ROOTFS}/tmp/*; \
 	"
+
+BOX_BRAND = "ceryon"
+
+KERNEL_FILE = "kernel.bin"
+
+ROOTFS_FILE = "rootfs.tar.bz2"
+
+SOC_FAMILY = "bcm7252s"
+
+MTD_KERNEL = "mmcblk0p2"
+MTD_ROOTFS = "mmcblk0p3"
+MTD_BOOTFS = "mmcblk0p1"
+MTD_BLACK  = "mmcblk0"
+
+STB_PLATFORM = "8100s"
+
+BLINDSCAN_BINARY = "ceryon_blindscan"
