@@ -5,7 +5,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS = "\
 MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS = "\
 	kernel-module-cdfs \
 	\
-	${@bb.utils.contains('MACHINE_FEATURES', 'v3d-nxpl', 'axas-libgles-${MACHINE}' , '', d)} \
+	${@bb.utils.contains('MACHINE_FEATURES', 'v3d-cortexa15', 'axas-libgles-${MACHINE}' , '', d)} \
 	resizerootfs \
 	partitions-by-name \
 	\

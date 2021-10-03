@@ -16,9 +16,6 @@ PREFERRED_PROVIDER_virtual/mesa ?= "mesa"
 require conf/machine/include/tune-cortexa15.inc
 require conf/machine/include/axas-essential.inc
 
-EXTRA_OECONF_append_pn-kodi = " --with-gpu=v3d"
-EXTRA_OECMAKE_append_pn-kodi += " -DWITH_V3D=nxpl"
-
 PACKAGECONFIG_GL_pn-qtbase = " "
 PACKAGECONFIG_append_pn-qtbase += " gles2 linuxfb"
 
